@@ -1,0 +1,48 @@
+{
+    "scan_interval": 45,
+    "global_settings": {
+        "keywords": ["贈送",
+            { "AND": ["問卷", "送"] },
+            { "AND": ["問卷", "抽"] }
+        ],
+        "blacklist": ["政問"]
+    },
+    "sources":{
+        "ptt": [
+            {
+                "board_name": "Gossiping",
+                "enable": true,
+                "scan_pages": 5,
+                "keywords": [
+                    { "include": "爆卦", "min_push": 99 },
+                    { "include": "新聞", "min_push": 99 },
+                    { "include": "獨家", "min_push": 99 }
+                ]
+            },
+            {
+                "board_name": "Stock",
+                "enable": true,
+                "scan_pages": 3,
+                "keywords": [
+                    { "include": "新聞", "min_push": 99 },
+                    { "include": "情報", "min_push": 99 }
+                ]
+            },
+            {
+                "board_name": "Lifeismoney",
+                "enable": true,
+                "keywords": ["1+1", "史低", "限免", "100%", "DDR", "京東", "免費",
+                    { "min_push": 33 }
+                ],
+                "blacklist": ["過期"]
+            }
+        ],
+        "dcard": [] 
+    },
+    "notifiers": [
+        {
+            "type": "discord",
+            "webhook_url": "YOUR_WEBHOOK_URL_HERE"
+        }
+    ]
+}
