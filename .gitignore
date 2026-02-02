@@ -1,0 +1,14 @@
+# 設定檔 (裡面有 webhook url)
+config.json
+# 歷史紀錄
+history.json
+# 虛擬環境
+venv/
+# Python 快取
+__pycache__/
+*.pyc
+# Log 檔
+logs/
+*.log
+# 鎖定檔
+*.lock
